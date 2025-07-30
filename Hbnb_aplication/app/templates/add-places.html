@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="icon" href="../static/images/icon.png">
+    <link rel="stylesheet" href="../static/css/add-place.css">
+</head>
+<body>
+    {% include "header.html" %}
+    <main class="main">
+        <h1 class="title-main">Añade un nuevo Place</h1>
+        <section class="section-add-place">
+            <form action="" class="form-place" id="formAddPlace">
+                <label class="title-input-update" for="title">title</label>
+                <input class="input-update-data" type="text" id="title" name="title" required placeholder="title" >
+                <label class="title-input-update" for="price">price</label>
+                <input class="input-update-data" type="text" id="price" name="price" required placeholder="Price" >
+                <label class="title-input-update" for="latitude">latitude</label>
+                <input class="input-update-data" type="text" id="latitude" name="latitude" required placeholder="latitude" >
+                <label class="title-input-update" for="longitude">longitude</label>
+                <input class="input-update-data" type="text" id="longitude" name="longitude" required placeholder="longitude" >
+                <label class="title-input-update" for="description">description</label>
+                <textarea class="input-update-data" type="text" id="description" name="description" required placeholder="Description"></textarea>
+                <button id="boton-form"></button>
+            </form>
+            <div class="container-botones">
+                <label class="botones" for="boton-form">Crear</label>
+            </div>
+        </section>
+    </main>
+    {% include "footer.html" %}
+    <div class="fondo-ventana-emergente" id="ventanaEmergente">
+        <h2 class="title-ventana-emergente">Creacion Exitosa!!!</h2>
+        <div class="contenedor-lista">
+            <h3 class="title-contenedor">Lista de amenitis</h3>
+            <p>selecciona las amenities que brinda tu Place</p>
+            <ul class="lista-amenities" id="amenityList">
+                <li class="lista-items" id="amenityItems">
+                    <p><span>wifi</span><input type="checkbox" name="amenitisCreadas" id="amenitisCreadas"></p>
+                </li>
+            </ul>
+            <section class="crear-amenity">
+                <p>o creala si no existe en la lista de Amenities</p>
+                <input class="input-crear-amenity" type="text" placeholder="Nombre del amenity" id="nombreNewAmenity">
+                <button class="botones-ventana" id="botonCrearAmenity" type="submit">crear</button>
+            </section>
+            <button class="botones-ventana" id="addAmenitiesToPlace" >añadir amenities</button>
+        </div>
+    </div>
+    <script src="/static/javascript/add-places.js"></script>
+</body>
+</html>

@@ -9,13 +9,9 @@
     <link rel="stylesheet" href="../static/css/style-login.css">
 </head>
 <body>
-    <header class="header-of-index">
-        <nav class="nav-of-index">
-            <a href="/"><img class="logo" src="../static/images/logo.png" alt="logo of the website"></a>
-            <a class="login-button" href="/login" id="login-link">Log in</a>
-        </nav>
-    </header>
+    {% include "header.html" %}
     <main class="main-login">
+        <h1 class="title-of-main">Register or log in, to see all content</h1>
         <div class="container">
             <input type="checkbox" id="activador" class="checkbox-activador">
             <div class="grupo-checkbox">
@@ -48,9 +44,7 @@
             </form>
         </div>
     </main>
-    <footer>
-        <h3>©2024 HBnB Evolution. all rights reserved.</h3>
-    </footer>
+    {% include "footer.html" %}
     <script src="../static/javascript/scripts-login.js"></script>
 </body>
 </html>

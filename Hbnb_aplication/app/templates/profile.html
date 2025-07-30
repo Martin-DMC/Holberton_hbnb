@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="icon" href="../static/images/icon.png">
+    <link rel="stylesheet" href="../static/css/style-profile.css">
+</head>
+<body>
+    {% include "header.html" %}
+    <main class="main">
+        <h1 class="title-main">Profile</h1>
+        <section class="profile-user">
+            <header class="header-info">
+                <h3 class="title-header" id="full-name-user">name apellido</h3>
+            </header>
+            <div class="info-user">
+                <section class="data-user" id="info-of-user">
+                </section>
+                <br>
+                <section class="places-user" id="places-of-user">
+                    <h4>lista de lugares</h4>
+                </section>
+            </div>
+            <footer class="footer-info">
+                <button class="boton-footer" id="botonEditar">editar</button>
+                <dialog class="ventana-emergente" id="dialogoEditar">
+                    <h2>Actualizar datos del Usuario</h2>
+                    <form id="form-update-perfil">
+                        <label class="title-input-update" for="First_name">First Name:</label>
+                        <input class="input-update-data" type="text" id="First_name" name="first_name" required placeholder="Rick" >
+                        <label class="title-input-update" for="Last_name">Last Name:</label>
+                        <input class="input-update-data" type="text" id="Last_name" name="last_name" required placeholder="Sanchez" >
+                        <label class="title-input-update" for="email">Email:</label>
+                        <input class="input-update-data" type="email" id="email" name="email" placeholder="Email" >
+                        <label class="title-input-update" for="password">Password:</label>
+                        <input class="input-update-data" type="password" id="password" name="password" placeholder="password">
+                        <button class="boton-footer" id="Actualizarperfil" type="submit">Actualizar</button>
+                    </form>
+                    <button class="boton-footer" id="cerrarDialogoEditar">Cerrar</button>
+                </dialog>
+                <button class="boton-footer">hacer reserva</button>
+                <button class="boton-footer">actualizar place</button>
+            </footer>
+        </section>
+    </main>
+    {% include "footer.html" %}
+    <script src="/static/javascript/scripts-profile.js"></script>
+</body>
+</html>

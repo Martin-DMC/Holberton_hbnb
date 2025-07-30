@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #00f;
+}
+
+/*##############################
+---------  HEADER  -------------
+################################*/
+.header-of-index {
+    background-color: #00fa;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    max-height: 80px;
+}
+.nav-of-index{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+#logout-link, .login-button {
+    text-decoration: none;
+    color: white;
+    background-color: #00fa;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    font-weight: bold;
+}
+.login-button:active, #logout-link:active{
+    background-color: #00ca;
+    border: 1px solid #000;
+}
+
+/*##############################
+------------ MAIN --------------
+################################*/
+.main {
+    background-color: #fafafa;
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    box-sizing: border-box;
+}
+
+.title-main {
+    font-size: 3rem;
+    padding: 10px;
+}
+
+.section-add-place {
+    width: 80vw;
+    height: 70vh;
+    border: solid #00f 2px;
+    margin: auto;
+    position: relative;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: #00f 0 0 10px 5px;
+}
+
+.form-place {
+    width: 70vw;
+    height: 70vh;
+    margin: auto;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.title-input-update {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    padding-top: 1opx;
+}
+
+.input-update-data {
+    background-color: #fff;
+    width: 90%;
+    height: 40px;
+    margin: 15px;
+    border: none;
+    font-size: 1.2rem;
+    border-bottom: #00f solid 2px;
+    padding-left: 20px;
+    margin: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.input-update-data:active {
+    border-left: #00f solid 2px;
+}
+.input-update-data::placeholder {
+    font-size: 1rem;
+}
+
+.input-update-data:focus {
+    outline: none;
+    border-bottom: #00f solid 2px;
+    border-left: #00f solid 2px;
+    font-size: 1.2rem;
+    border-radius: none;
+    background-image: linear-gradient(to right, #fff, #00f6);
+    border-radius: 0 5px 5px 0;
+}
+
+.input-update-data:hover {
+    cursor: pointer;
+    color: #000;
+    padding-left: 30px;
+    border-bottom: #00f solid 3px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#boton-form {
+    display: none;
+}
+
+.container-botones {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 10px;
+}
+
+.botones {
+    background-color: #00f;
+    height: 35px;
+    width: 110px;
+    border-radius: 10px;
+    color: #fafafa;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones:active {
+    background-color: #005;
+    color: #fff;
+    border: #00f solid 2px;
+}
+
+/*-----------------VENTANA EMERGENTE---------------------*/
+.fondo-ventana-emergente {
+    height: 100%;
+    width: 100%;
+    background-color: #000e;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    gap: 10px;
+}
+.title-ventana-emergente {
+    color: #fafafa;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: -25px;
+    text-decoration: underline;
+}
+.contenedor-lista {
+    width: 80%;
+    height: 50%;
+    background-color: #fafafa;
+    border-radius: 20px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.title-contenedor {
+    font-size: 1.4rem;
+    padding-bottom: 5px;
+}
+.lista-amenities {
+    width: 50%;
+    height: 50%;
+    border: solid 2px #00f;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 17px;
+    overflow: auto;
+}
+
+.lista-items {
+    list-style: none;
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.lista-items > p{
+    display: flex;
+    justify-content: space-around;
+}
+
+.crear-amenity {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+}
+
+section > p {
+    margin-bottom: 10px;
+}
+
+.input-crear-amenity {
+    width: 40%;
+    height: 28px;
+    outline: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding-left: 5px;
+    border: none;
+    border-bottom: solid 2px #00f;
+}
+
+.input-crear-amenity:hover {
+    border-bottom: solid 3px #00f;
+    font-size: 1.1rem;
+}
+
+.input-crear-amenity:focus {
+    border: solid #00f 2px;
+}
+
+.botones-ventana {
+    background-color: #00f;
+    font-size: 1rem;
+    border: #00f solid 2px;
+    border-radius: 6px;
+    color: #fff;
+    padding: 4px 10px;
+    text-align: center;
+    margin: 15px 5px;
+    cursor: pointer;
+}
+
+.botones-ventana:active {
+    background-color: #005;
+    font-size: 1rem;
+    box-shadow: #00f 0 0 10px 5px;
+    border-radius: 6px;
+    color: #fff;
+    padding: 4px 10px;
+    text-align: center;
+    margin: 15px 5px;
+}
+
+/*##############################
+---------- FOOTER --------------
+################################*/
+footer{
+    position: relative;
+    height: 10%;
+    width: 100%;
+    min-height: 30px;
+    max-height: 60px;
+    background-color: #00fa;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    bottom: 0;
+}
+.text-footer {
+    margin: 0;
+    padding: 0;
+}

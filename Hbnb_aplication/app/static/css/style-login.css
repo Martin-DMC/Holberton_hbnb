@@ -67,6 +67,11 @@ body {
     justify-content: top;
     box-sizing: border-box;
 }
+.title-of-main {
+    font-weight: bold;
+    margin: auto;
+    margin-bottom: 0;
+}
 
 /*###########################################
 -------------- CONTAINER --------------------

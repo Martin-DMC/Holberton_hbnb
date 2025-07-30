@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #00f;
+}
+
+/*##############################
+---------  HEADER  -------------
+################################*/
+.header-of-index {
+    background-color: #00fa;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    max-height: 80px;
+}
+.nav-of-index{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+#logout-link, .login-button {
+    text-decoration: none;
+    color: white;
+    background-color: #00fa;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    font-weight: bold;
+}
+.login-button:active, #logout-link:active{
+    background-color: #00ca;
+    border: 1px solid #000;
+}
+
+/*##############################
+------------ MAIN --------------
+################################*/
+.main {
+    background-color: #fafafa;
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    box-sizing: border-box;
+}
+
+.title-main {
+    font-size: 3rem;
+    padding: 10px;
+}
+
+/*-#-#-#-#- header y caja general -#-#-#-#-*/
+.header-info {
+    height: 15%;
+    width: 100%;
+    background-color: #00f;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 20px;
+    border-bottom: #00f solid 2px;
+    color: #fafafa;
+}
+
+.profile-user {
+    position: relative;
+    width: 80vw;
+    height: 70vh;
+    border-radius: 22px;
+    box-shadow: #00f 0 0 15px 8px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+/*-#-#-#-#- seccion datos del user/places del user -#-#-#-#-*/
+.info-user {
+    position: relative;
+    box-sizing: border-box;
+    height: 75%;
+}
+
+.data-user {
+    position: absolute;
+    width: 50%;
+    left: 0;
+    height: 100%;
+    border-right: #00f solid 1px;
+    font-size: 1.3rem;
+    padding-top: 40px;
+}
+
+.data-api {
+    text-align: center;
+    padding: 10px;
+}
+
+.places-user {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    border-left: #00f solid 1px;
+    text-align: center;
+}
+
+/*-#-#-#-#- footer del perfil -#-#-#-#-*/
+.footer-info {
+    background-color: #fafafa;
+    border-top: #00f 2px solid;
+    border-radius: 0 0 35px 35px;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.boton-footer {
+    background-color: #00f;
+    height: 35px;
+    width: 110px;
+    border-radius: 10px;
+    color: #fafafa;
+    font-weight: bold;
+    border: none;
+    margin-top: 10px;
+}
+
+.boton-footer:active {
+    background-color: #005;
+    color: #fff;
+    border: #00f solid 2px;
+}
+
+.ventana-emergente {
+    width: 60%;
+    height: 60%;
+    margin: auto;
+    border: #00f solid 3px;
+    box-shadow: #00f 0 0 20px 2px;
+    border-radius: 30px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.ventana-emergente::backdrop {
+    background-color: #000e;
+    transition: opacity 0.3s ease-in-out;
+}
+
+dialog h2 {
+    padding: 10px;
+    font-size: 2rem;
+    background-color: #00f;
+    height: 10%;
+    color: #fafafa;
+    margin-bottom: 30px;
+}
+
+.title-input-update {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.input-update-data {
+    background-color: #fff;
+    width: 90%;
+    height: 40px;
+    margin: 15px;
+    border: none;
+    font-size: 1.2rem;
+    border-bottom: #00f solid 2px;
+    padding-left: 20px;
+}
+
+.input-update-data:active {
+    border-left: #00f solid 2px;
+}
+.input-update-data::placeholder {
+    font-size: 1rem;
+}
+
+.input-update-data:focus {
+    outline: none;
+    border-left: #00f solid 2px;
+    border-bottom: none;
+    font-size: 1.2rem;
+    border-radius: none;
+    background-image: linear-gradient(to right, #fff, #00f6);
+    border-radius: 0 5px 5px 0;
+}
+
+.input-update-data:hover {
+    cursor: pointer;
+    color: #000;
+    padding-left: 30px;
+    border-left: #00f solid 2px;
+    border-bottom: #00f solid 2px;
+    font-size: 1rem;
+}
+
+/*##############################
+---------- FOOTER --------------
+################################*/
+footer{
+    position: relative;
+    height: 10%;
+    width: 100%;
+    min-height: 30px;
+    max-height: 60px;
+    background-color: #00fa;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    bottom: 0;
+}
+.text-footer {
+    margin: 0;
+    padding: 0;
+}

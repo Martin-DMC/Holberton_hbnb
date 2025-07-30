@@ -8,13 +8,7 @@
     <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 <body>
-    <header class="header-of-index">
-        <nav class="nav-of-index">
-            <img class="logo" src="../static/images/logo.png" alt="logo of the website">
-            <a class="login-button" href="/login" id="login-link">Log in</a>
-            <button id="logout-link" style="display: none;">log out</button>
-        </nav>
-    </header>
+    {% include "header.html" %}
     <main class="main-index">
         <h1 class="title-main">Available Places</h1>
         <section id="filter">
@@ -26,6 +20,16 @@
                 <option value="all"> all</option>
                 <!-- Options will be populated dynamically -->
             </select>
+        </section>
+        <input type="checkbox" name="activador-opciones" id="activ-opc">
+        <label class="activador" for="activ-opc">Menu</label>
+        <section class="opciones" id="menu-opc">
+            <ul class="opciones-list">
+                <li class="opciones-item"><a href="/profile">Perfil</a></li>
+                <li class="opciones-item"><a href="/addPlace">Añadir place</a></li>
+                <li class="opciones-item">item 1</li>
+                <li class="opciones-item">item 2</li>
+            </ul>
         </section>
         <section id="places-list">
             <!-- List of places will be populated dynamically -->
@@ -46,9 +50,7 @@
             </article>
         </section>
     </main>
-    <footer>
-        <h3>©2024 HBnB Evolution. all rights reserved.</h3>
-    </footer>
+    {% include "footer.html" %}
     <script src="/static/javascript/scripts.js"></script>
 </body>
 </html>

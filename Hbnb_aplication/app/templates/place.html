@@ -8,14 +8,9 @@
     <link rel="stylesheet" href="../static/css/style-places.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <a href="/"><img class="logo" src="../static/images/logo.png" alt="logo of the website"></a>
-            <a class="login-button" href="/login" id="login-link">Log in</a>
-            <button id="logout-link" style="display: none;">log out</button>
-        </nav>
-    </header>
+    {% include "header.html" %}
     <main>
+        <button class="hacer-reserva" id="hacerReserva">Hacer reserva</button>
         <section id="place-details">
             <!-- Place details will be populated dynamically -->
             <div class="details-show" id="details-show">
@@ -28,49 +23,30 @@
             <div class="ventana-container">
                 <div class="container" id="container">
                     <div class="reviews-list">
-
-                    </div>
-                    <div class="reviews-list">
-
-                    </div>
-                    <div class="reviews-list">
-
-                    </div>
-                    <div class="reviews-list">
-
-                    </div>
-                    <div class="reviews-list">
-
-                    </div>
-                    <div class="reviews-list">
-
-                    </div>
-                    <div class="reviews-list">
-
                     </div>
                 </div>
             </div>
         </section>
         <section id="add-review">
-            <h2>Add a Review</h2>
-            <form id="review-form">
-                <label class="text-add-review" for="review-text">Your Review:</label>
-                <textarea rows="3" class="input-add-review" id="review-text" name="review-text" required></textarea>
-                <label class="text-add-review" for="stars_rating">Rating:</label>
-                <select class="input-add-review" name="stars_rating" id="stars_rating">
-                    <option value="1" class="cant_stars"><b>1 star</b></option>
-                    <option value="2" class="cant_stars"><b>2 stars</b></option>
-                    <option value="3" class="cant_stars"><b>3 stars</b></option>
-                    <option value="4" class="cant_stars"><b>4 stars</b></option>
-                    <option value="5" class="cant_stars"><b>5 stars</b></option>
-                </select>
-                <button type="submit">Submit</button>
-            </form>
+            {% include "add_review.html" %}
         </section>
     </main>
-    <footer>
-        <h3 class="text-footer">©2024 HBnB Evolution. all rights reserved.</h3>
-    </footer>
+    <section class="fondo-ventana-emergente" id="ventanaEmergente">
+        <h2 class="title-ventana-emergente">Hacer reserva!!!</h2>
+        <div class="contenedor-lista">
+            <p>Seleccione o ingrese el tiempo de su estadia</p>
+            <form class="form-reserva" id="formReserva" action="">
+                <label class="title-inputs" for="check-in">Fecha de ingreso</label>
+                <input type="date" name="check_in" id="checkIn">
+                <label class="title-inputs" for="check-out">Fecha de salida</label>
+                <input type="date" name="check_out" id="checkOut">
+                <button type="submit" id="botonReservar"></button>
+            </form>
+            <label class="botones-ventana" for="botonReservar">Reservar</label>
+            <button class="botones-ventana boton__x" id="closeVentanaEmergente" >X</button>
+        </div>
+    </section>
+    {% include "footer.html" %}
     <script src="../static/javascript/scripts-places.js"></script>
 </body>
 </html>

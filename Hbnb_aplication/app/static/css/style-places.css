@@ -17,7 +17,7 @@ body{
 /*##############################
 ---------  HEADER  -------------
 ################################*/
-.header {
+.header-of-index {
     background-color: #00fa;
     padding: 10px;
     text-align: center;
@@ -27,7 +27,7 @@ body{
     width: 100%;
     max-height: 80px;
 }
-.nav{
+.nav-of-index{
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -59,6 +59,27 @@ main{
     width: 100%;
     background-color: #fafafa;
     box-sizing: border-box;
+}
+
+.hacer-reserva {
+    padding: 8px 8px;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: #00f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.hacer-reserva:active {
+    padding: 8px 8px;
+    background-color: #005;
+    outline: solid 2px #00f;
 }
 
 /*------- ZONA DETALLES PLACES ----------*/
@@ -105,7 +126,7 @@ main{
     align-items: center;
 }
 .ventana-container {
-    width: 85%;
+    width: 70%;
     height: 58%;
     position: absolute;
     right: 3%;
@@ -132,7 +153,7 @@ main{
 }
 .title-reviews {
     position: absolute;
-    left: 0;
+    left: 20px;
     top: 8px;
 }
 .reviews-list {
@@ -215,7 +236,7 @@ select option:active {
     background-color: #000;
     font-size: medium;
 }
-section button {
+.boton-reviews {
     width: 93%;
     height: 25px;
     margin-top: 15px;
@@ -224,6 +245,112 @@ section button {
     background-color: #00f;
     color: #fff;
     border-radius: 5px;
+}
+
+/*-#-#-#-#- VENTANA EMERGENTE -#-#-#-#-*/
+.fondo-ventana-emergente {
+    height: 100%;
+    width: 100%;
+    background-color: #000e;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    gap: 10px;
+}
+.title-ventana-emergente {
+    color: #fafafa;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: -25px;
+    text-decoration: underline;
+}
+.contenedor-lista {
+    width: 80%;
+    height: 50%;
+    background-color: #fafafa;
+    border-radius: 20px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedor-lista p {
+    margin-top: 40px;
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+}
+
+.form-reserva {
+    width: 70%;
+    height: 40%;
+    margin: auto;
+    border-radius: 15px;
+    border: #00f solid 2px;
+    padding: 115px 0;
+}
+
+#botonReservar {
+    display: none;
+}
+
+.title-inputs {
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+
+#checkIn,
+#checkOut {
+    width: 50%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    height: 30px;
+    font-size: 0.9rem;
+    text-align: center;
+    border-radius: 5px;
+    cursor: text;
+    border: #00f solid 1px;
+}
+
+.botones-ventana {
+    background-color: #00f;
+    font-size: 1rem;
+    border: #00f solid 2px;
+    border-radius: 6px;
+    color: #fff;
+    padding: 4px 10px;
+    text-align: center;
+    margin: 25px 15px;
+    cursor: pointer;
+}
+
+.botones-ventana:active {
+    background-color: #005;
+    font-size: 1rem;
+    box-shadow: #00f 0 0 10px 5px;
+    border-radius: 6px;
+    color: #fff;
+    padding: 4px 10px;
+    text-align: center;
+    margin: 25px 15px;
+}
+
+.boton__x {
+    position: absolute;
+    padding: 2px 5px;
+    right: 1px;
+    margin: 10px;
+}
+
+.boton__x:active {
+    position: absolute;
+    right: 1px;
+    padding: 2px 5px;
+    margin: 10px;
 }
 
 /*##############################
